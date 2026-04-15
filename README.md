@@ -223,3 +223,54 @@ Start by generating:
 3. ML model template
 4. LLM service module
 5. HITL frontend UI structure
+
+# PROJECT STRUCTURE
+CBE-berasei-BI/
+│
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── customers.py
+│   │   │   ├── recommendations.py
+│   │   │   ├── decisions.py
+│   │   │   ├── logs.py
+│   │   │
+│   │   ├── core/
+│   │   │   ├── config.py
+│   │   │   ├── security.py
+│   │   │
+│   │   ├── db/
+│   │   │   ├── database.py
+│   │   │   ├── models.py
+│   │   │
+│   │   ├── ml/
+│   │   │   ├── churn_model.py
+│   │   │   ├── fraud_model.py
+│   │   │
+│   │   ├── llm/
+│   │   │   ├── engine.py
+│   │   │
+│   │   ├── services/
+│   │   │   ├── decision_engine.py
+│   │   │   ├── execution_service.py
+│   │   │
+│   │   └── main.py
+│
+├── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Customer360.jsx
+│   │   │   ├── ReviewQueue.jsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── DecisionCard.jsx
+│   │   │   ├── ActionPanel.jsx
+│   │   │
+│   │   └── App.js
+│
+├── infra/
+│   ├── docker-compose.yml
+│   ├── Dockerfile
+│
+└── README.md
